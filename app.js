@@ -4,7 +4,7 @@ document.getElementById('plusButton').addEventListener('click', function () {
   valueCount++;
   document.getElementById('inputValue').value = valueCount;
 
-  if (valueCount > 1) {
+  if (valueCount > 0) {
     document.getElementById('minusButton').removeAttribute('disabled');
     document.getElementById('minusButton').classList.remove('disabled');
   }
@@ -19,7 +19,7 @@ document.getElementById('minusButton').addEventListener('click', function () {
   valueCount--;
   document.getElementById('inputValue').value = valueCount;
 
-  if (valueCount == 1) {
+  if (valueCount == 0) {
     document.getElementById('minusButton').setAttribute('disabled', 'disabled');
   }
   totalPrice();
