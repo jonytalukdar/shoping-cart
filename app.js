@@ -2,6 +2,12 @@
 document.getElementById('plusButton').addEventListener('click', function () {
   plusButton('inputValue');
   totalPhonePrice();
+
+  const currentPrice = document.getElementById('phonePrice').innerText;
+  const totalPrice = document.getElementById('totalPrice');
+  const total = currentPrice + totalPrice;
+  const totalValue = parseFloat(total);
+  document.getElementById('totalPrice').innerText = totalValue;
 });
 
 // first minus button
