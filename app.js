@@ -15,6 +15,7 @@ document
   .getElementById('secondPlusButton')
   .addEventListener('click', function () {
     plusButton('secondInputValue');
+    totalCasingPrice();
   });
 
 //second minus button
@@ -22,6 +23,7 @@ document
   .getElementById('secondMinusButton')
   .addEventListener('click', function () {
     minusButton('secondInputValue');
+    totalCasingPrice();
   });
 
 // function for plus button
@@ -47,10 +49,10 @@ function minusButton(id) {
   }
 }
 
-// taking value form price
-var price = document.getElementById('phonePrice').innerText;
+// taking value form phone price
+var phonePrice = document.getElementById('phonePrice').innerText;
 // price calculation function
 function totalPhonePrice() {
-  var total = valueCount * price;
+  var total = valueCount * phonePrice;
   document.getElementById('phonePrice').innerText = total;
 }
