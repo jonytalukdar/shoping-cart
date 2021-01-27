@@ -18,12 +18,11 @@ document
   });
 
 //second minus button
-
-// document
-//   .getElementById('secondMinusButton')
-//   .addEventListener('click', function () {
-//     minusButton('secondInputValue');
-//   });
+document
+  .getElementById('secondMinusButton')
+  .addEventListener('click', function () {
+    minusButton('secondInputValue');
+  });
 
 // function for plus button
 function plusButton(id) {
@@ -39,9 +38,9 @@ function plusButton(id) {
 
 // fucntion for minus button
 function minusButton(id) {
-  valueCount = document.getElementById('inputValue').value;
+  valueCount = document.getElementById(id).value;
   valueCount--;
-  document.getElementById('inputValue').value = valueCount;
+  document.getElementById(id).value = valueCount;
 
   if (valueCount == 0) {
     document.getElementById('minusButton').setAttribute('disabled', 'disabled');
