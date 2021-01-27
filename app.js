@@ -1,13 +1,13 @@
 // first plus button
 document.getElementById('plusButton').addEventListener('click', function () {
   plusButton('inputValue');
-  totalPhonePrice('phonePrice');
+  totalPhonePrice();
 });
 
 // first minus button
 document.getElementById('minusButton').addEventListener('click', function () {
   minusButton('inputValue');
-  totalPhonePrice('price');
+  totalPhonePrice();
 });
 
 // second plus button
