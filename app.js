@@ -6,40 +6,12 @@ document.getElementById('plusButton').addEventListener('click', function () {
   decreaseTotal('totalBalance');
 });
 
-// increase function
-function increaseTotal(id) {
-  const currentPrice = document.getElementById('phonePrice').innerText;
-  const totalPrice = document.getElementById(id);
-  const total = currentPrice + totalPrice;
-  const totalValue = parseFloat(total);
-  document.getElementById(id).innerText = totalValue;
-}
-
-// decrease function
-function decreaseTotal(id) {
-  const currentNewBalance = document.getElementById('phonePrice').innerText;
-  const totalNewPrice = document.getElementById(id);
-  const totalNew = currentNewBalance + totalNewPrice;
-  const totalNewBalance = parseFloat(totalNew);
-  document.getElementById(id).innerText = totalNewBalance;
-}
-
 // first minus button
 document.getElementById('minusButton').addEventListener('click', function () {
   minusButton('inputValue');
   totalPhonePrice();
-
-  const currentPrice = document.getElementById('phonePrice').innerText;
-  const totalPrice = document.getElementById('totalPrice');
-  const total = currentPrice + totalPrice;
-  const totalValue = parseFloat(total);
-  document.getElementById('totalPrice').innerText = totalValue;
-
-  const currentNewBalance = document.getElementById('phonePrice').innerText;
-  const totalNewPrice = document.getElementById('totalBalance');
-  const totalNew = currentNewBalance + totalNewPrice;
-  const totalNewBalance = parseFloat(totalNew);
-  document.getElementById('totalBalance').innerText = totalNewBalance;
+  increaseTotal('totalPrice');
+  decreaseTotal('totalBalance');
 });
 
 // second plus button
@@ -68,6 +40,24 @@ document
         .setAttribute('disabled', 'disabled');
     }
   });
+
+// increase function
+function increaseTotal(id) {
+  const currentPrice = document.getElementById('phonePrice').innerText;
+  const totalPrice = document.getElementById(id);
+  const total = currentPrice + totalPrice;
+  const totalValue = parseFloat(total);
+  document.getElementById(id).innerText = totalValue;
+}
+
+// decrease function
+function decreaseTotal(id) {
+  const currentNewBalance = document.getElementById('phonePrice').innerText;
+  const totalNewPrice = document.getElementById(id);
+  const totalNew = currentNewBalance + totalNewPrice;
+  const totalNewBalance = parseFloat(totalNew);
+  document.getElementById(id).innerText = totalNewBalance;
+}
 
 // function for plus button
 function plusButton(id) {
