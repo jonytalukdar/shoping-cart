@@ -20,7 +20,6 @@ document
   .addEventListener('click', function () {
     plusButton('secondInputValue');
     totalCasingPrice();
-    increaseTotal('totalPrice');
 
     if (valueCount > 0) {
       document.getElementById('secondMinusButton').removeAttribute('disabled');
