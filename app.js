@@ -4,8 +4,8 @@ document.getElementById('plusButton').addEventListener('click', function () {
   totalPhonePrice();
 
   const currentPrice = document.getElementById('phonePrice').innerText;
-  const totalPrice = document.getElementById('totalPrice');
-  const total = currentPrice + totalPrice;
+  const subTotal = document.getElementById('totalPrice');
+  const total = currentPrice + subTotal;
   const totalValue = parseFloat(total);
   document.getElementById('totalPrice').innerText = totalValue;
 });
