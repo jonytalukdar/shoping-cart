@@ -16,6 +16,11 @@ document
   .addEventListener('click', function () {
     plusButton('secondInputValue');
     totalCasingPrice();
+
+    if (valueCount > 0) {
+      document.getElementById('secondMinusButton').removeAttribute('disabled');
+      document.getElementById('secondMinusButton').classList.remove('disabled');
+    }
   });
 
 //second minus button
@@ -24,6 +29,12 @@ document
   .addEventListener('click', function () {
     minusButton('secondInputValue');
     totalCasingPrice();
+
+    if (valueCount == 0) {
+      document
+        .getElementById('secondMinusButton')
+        .setAttribute('disabled', 'disabled');
+    }
   });
 
 // function for plus button
