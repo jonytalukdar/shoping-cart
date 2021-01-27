@@ -1,10 +1,10 @@
-// plus button
+// first plus button
 document.getElementById('plusButton').addEventListener('click', function () {
   plusButton('inputValue');
   totalPrice();
 });
 
-// minus button
+// first minus button
 document.getElementById('minusButton').addEventListener('click', function () {
   minusButton('inputValue');
   totalPrice();
