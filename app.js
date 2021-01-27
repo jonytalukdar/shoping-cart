@@ -84,14 +84,13 @@ function minusButton(id) {
 
 // taking value form phone price
 var phonePrice = document.getElementById('phonePrice').innerText;
-// price calculation function
 function totalPhonePrice() {
   var total = valueCount * phonePrice;
   document.getElementById('phonePrice').innerText = total;
 }
 
+// casPrice function
 var casPrice = document.getElementById('casingPrice').innerText;
-
 function totalCasingPrice() {
   var total = valueCount * casPrice;
   document.getElementById('casingPrice').innerText = total;
