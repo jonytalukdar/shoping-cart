@@ -2,16 +2,16 @@
 document.getElementById('plusButton').addEventListener('click', function () {
   plusButton('inputValue');
   totalPhonePrice();
-  increaseTotal('totalPrice');
-  decreaseTotal('totalBalance');
+  increaseTotal('totalPrice', 'phonePrice');
+  decreaseTotal('totalBalance', 'phonePrice');
 });
 
 // first minus button
 document.getElementById('minusButton').addEventListener('click', function () {
   minusButton('inputValue');
   totalPhonePrice();
-  increaseTotal('totalPrice');
-  decreaseTotal('totalBalance');
+  increaseTotal('totalPrice', 'phonePrice');
+  decreaseTotal('totalBalance', 'phonePrice');
 });
 
 // second plus button
@@ -20,6 +20,7 @@ document
   .addEventListener('click', function () {
     plusButton('secondInputValue');
     totalCasingPrice();
+    increaseTotal('totalPrice');
 
     if (valueCount > 0) {
       document.getElementById('secondMinusButton').removeAttribute('disabled');
@@ -42,8 +43,8 @@ document
   });
 
 // increase function
-function increaseTotal(id) {
-  const currentPrice = document.getElementById('phonePrice').innerText;
+function increaseTotal(id, id2) {
+  const currentPrice = document.getElementById(id2).innerText;
   const totalPrice = document.getElementById(id);
   const total = currentPrice + totalPrice;
   const totalValue = parseFloat(total);
@@ -51,8 +52,8 @@ function increaseTotal(id) {
 }
 
 // decrease function
-function decreaseTotal(id) {
-  const currentNewBalance = document.getElementById('phonePrice').innerText;
+function decreaseTotal(id, id2) {
+  const currentNewBalance = document.getElementById(id2).innerText;
   const totalNewPrice = document.getElementById(id);
   const totalNew = currentNewBalance + totalNewPrice;
   const totalNewBalance = parseFloat(totalNew);
