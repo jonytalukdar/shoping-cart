@@ -56,3 +56,10 @@ function totalPhonePrice() {
   var total = valueCount * phonePrice;
   document.getElementById('phonePrice').innerText = total;
 }
+
+var casPrice = document.getElementById('casingPrice').innerText;
+
+function totalCasingPrice() {
+  var total = valueCount * casPrice;
+  document.getElementById('casingPrice').innerText = total;
+}
