@@ -1,13 +1,13 @@
 // first plus button
 document.getElementById('plusButton').addEventListener('click', function () {
   plusButton('inputValue');
-  totalPrice();
+  totalPhonePrice('phonePrice');
 });
 
 // first minus button
 document.getElementById('minusButton').addEventListener('click', function () {
   minusButton('inputValue');
-  totalPrice();
+  totalPhonePrice('price');
 });
 
 // second plus button
@@ -47,10 +47,10 @@ function minusButton(id) {
   }
 }
 
-var price = document.getElementById('price').innerText;
-
+// taking value form price
+var price = document.getElementById('phonePrice').innerText;
 // price calculation function
-function totalPrice() {
+function totalPhonePrice() {
   var total = valueCount * price;
-  document.getElementById('price').innerText = total;
+  document.getElementById('phonePrice').innerText = total;
 }
