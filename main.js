@@ -1,6 +1,6 @@
 function handleProductChange(product, increase) {
   const productInput = document.getElementById(product + '-count');
-  const productCount = parseInt(productInput.value);
+  const productCount = getInputValue(product);
   let productNewCount = 0;
   // condition for increase decrease
   if (increase == true) {
@@ -20,4 +20,28 @@ function handleProductChange(product, increase) {
     productTotal = productNewCount * 59;
   }
   document.getElementById(product + '-total').innerText = productTotal;
+
+  calculalateTotal();
+}
+
+function calculalateTotal() {
+  const phoneCount = getInputValue('phone');
+  const caseCount = getInputValue('case');
+
+  const totalPrice = phoneCount * 1259 + caseCount * 59;
+  document.getElementById('total-price').innerText = totalPrice;
+
+  const tax = totalPrice * 0.1;
+  const taxAmount = Math.round(tax);
+  document.getElementById('tax-amount').innerText = taxAmount;
+
+  const grandTotal = Math.round(totalPrice + tax);
+  document.getElementById('grand-total').innerText = grandTotal;
+}
+
+function getInputValue(product) {
+  const productInput = document.getElementById(product + '-count');
+  const productCount = parseInt(productInput.value);
+
+  return productCount;
 }
