@@ -56,7 +56,11 @@
                 </div>
                 <div class="col-md-5 center-item">
                   <div class="input-group number-spinner">
-                    <button class="btn btn-default">
+                    <button
+                      onclick="handleProductChange(false);"
+                      id="case-decrease"
+                      class="btn btn-default"
+                    >
                       <i class="fas fa-minus"></i>
                     </button>
                     <input
@@ -65,7 +69,12 @@
                       class="form-control text-center"
                       value="1"
                     />
-                    <button id="case-increase" class="btn btn-default">
+
+                    <button
+                      onclick="handleProductChange(true);"
+                      id="case-increase"
+                      class="btn btn-default"
+                    >
                       <i class="fas fa-plus"></i>
                     </button>
                   </div>
