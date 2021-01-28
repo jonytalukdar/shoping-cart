@@ -1,18 +1,3 @@
-function handleProductChange(isIncrease, count, total) {
-  const caseInput = document.getElementById(count);
-  const caseCount = parseInt(caseInput.value);
-  let caseNewCount = 0;
-  if (isIncrease == true) {
-    caseNewCount = caseCount + 1;
-  }
-  if (isIncrease == false && caseCount > 0) {
-    caseNewCount = caseCount - 1;
-  }
-  caseInput.value = caseNewCount;
-  const caseTotal = caseNewCount * 59;
-  document.getElementById(total).innerText = caseTotal;
-}
-
 function handlePhoneChange(increase) {
   const phoneInput = document.getElementById('phone-count');
   const phoneCount = parseInt(phoneInput.value);
@@ -28,4 +13,19 @@ function handlePhoneChange(increase) {
 
   const phoneTotal = phoneNewCount * 1219;
   document.getElementById('phone-total').innerText = phoneTotal;
+}
+
+function handleProductChange(isIncrease, count, total) {
+  const caseInput = document.getElementById(count);
+  const caseCount = parseInt(caseInput.value);
+  let caseNewCount = 0;
+  if (isIncrease == true) {
+    caseNewCount = caseCount + 1;
+  }
+  if (isIncrease == false && caseCount > 0) {
+    caseNewCount = caseCount - 1;
+  }
+  caseInput.value = caseNewCount;
+  const caseTotal = caseNewCount * 59;
+  document.getElementById(total).innerText = caseTotal;
 }
