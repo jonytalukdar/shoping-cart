@@ -1,31 +1,23 @@
-function handlePhoneChange(increase) {
-  const phoneInput = document.getElementById('phone-count');
-  const phoneCount = parseInt(phoneInput.value);
-  //   const phoneNewCount = phoneCount - 1;
-  let phoneNewCount = 0;
+function handleProductChange(product, increase) {
+  const productInput = document.getElementById(product + '-count');
+  const productCount = parseInt(productInput.value);
+  let productNewCount = 0;
+  // condition for increase decrease
   if (increase == true) {
-    phoneNewCount = phoneCount + 1;
+    productNewCount = productCount + 1;
   }
-  if (increase == false && phoneCount > 0) {
-    phoneNewCount = phoneCount - 1;
+  if (increase == false && productCount > 0) {
+    productNewCount = productCount - 1;
   }
-  phoneInput.value = phoneNewCount;
+  productInput.value = productNewCount;
 
-  const phoneTotal = phoneNewCount * 1219;
-  document.getElementById('phone-total').innerText = phoneTotal;
-}
-
-function handleProductChange(isIncrease, count, total) {
-  const caseInput = document.getElementById(count);
-  const caseCount = parseInt(caseInput.value);
-  let caseNewCount = 0;
-  if (isIncrease == true) {
-    caseNewCount = caseCount + 1;
+  // condition for price
+  let productTotal = 0;
+  if (product == 'phone') {
+    productTotal = productNewCount * 1219;
   }
-  if (isIncrease == false && caseCount > 0) {
-    caseNewCount = caseCount - 1;
+  if (product == 'case') {
+    productTotal = productNewCount * 59;
   }
-  caseInput.value = caseNewCount;
-  const caseTotal = caseNewCount * 59;
-  document.getElementById(total).innerText = caseTotal;
+  document.getElementById(product + '-total').innerText = productTotal;
 }
